@@ -4,7 +4,7 @@ Simple Kernel in C and Assembly
 Hello, world ! Today I'm going to show you how to write a kernel in C and a little bit of assembly. This is a simple kernel written in C and Assembly which could be loaded with the GRUB bootloader on an x86 system. This kernel will
 display a message on the screen and then hang. All the source code is available on my github [repository](https://github.com/debashisbarman/Simple-Kernel-in-C-and-Assembly).
 
-##Tools
+## Tools
 Before writing the kernel, make sure that the following tools are available in your system.
 <ul>
 <li>An x86 computer (of course)</li>
@@ -15,7 +15,7 @@ Before writing the kernel, make sure that the following tools are available in y
 <li>grub</li>
 </ul>
 
-##Let's start coding
+## Let's start coding
 We like to write everything in C, but we cannot avoid a little bit of assembly. We will write a small file in x86
 assembly-language that serves as the starting point for our kernel. 
 
@@ -125,7 +125,7 @@ SECTIONS
 
 That's it. All done.
 
-##Building the kernel
+## Building the kernel
 We will now create object files from <code>kernel.asm</code> and <code>kernel.c</code> and then link it using our linker script.
 
 <pre>
@@ -144,7 +144,7 @@ Now the linking part,
 ld -m elf_i386 -T link.ld -o kernel kasm.o kc.o
 </pre>
 
-##Now run your kernel
+## Now run your kernel
 We will now run the kernel on the <code>qemu</code> emulator.
 
 <pre>
